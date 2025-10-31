@@ -35,6 +35,7 @@ namespace GestionClientes.dao
             while (lectura.Read())
             {
                 Cliente cliente = new Cliente();
+                cliente.Id = lectura.GetInt32("id");
                 cliente.Nombre = lectura.GetString("nombre");
                 cliente.Apellido = lectura.GetString("apellido");
                 cliente.Telefono = lectura.GetString("telefono");
@@ -45,7 +46,8 @@ namespace GestionClientes.dao
         }
         public void Guardar(Cliente cliente)
         {
-            string consulta = "INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `telefono`, `tarjeta_de_credito`) VALUES (NULL, '"+cliente.Nombre+"', '"+cliente.Apellido+"', '"+cliente.Telefono+"', '"+cliente.TarjetaDeCredito+"');";
+            string consulta = "INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `telefono`, `tarjeta_de_credito`) VALUES (NULL, '"
+                +cliente.Nombre+"', '"+cliente.Apellido+"', '"+cliente.Telefono+"', '"+cliente.TarjetaDeCredito+"');";
             MySqlCommand comando = new MySqlCommand(consulta);
             comando.Connection = Conectar();
             comando.ExecuteNonQuery();
@@ -53,6 +55,15 @@ namespace GestionClientes.dao
             
             
           
+        }
+
+        public void Eliminar(Cliente? cliente)
+        {
+            string consulta = "DELETE FROM `clientes` WHERE `clientes`.`id` = "+cliente.Id+";";
+            MySqlCommand comando = new MySqlCommand(consulta);
+            comando.Connection = Conectar();
+            comando.ExecuteNonQuery();
+            comando.Connection.Close();
         }
     }
 }

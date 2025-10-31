@@ -39,6 +39,8 @@
             lblTelefono = new Label();
             txtTarjetaCredito = new TextBox();
             lblTarjeta = new Label();
+            label1 = new Label();
+            lblId = new Label();
             SuspendLayout();
             // 
             // listClientes
@@ -133,11 +135,30 @@
             lblTarjeta.TabIndex = 9;
             lblTarjeta.Text = "Tarjeta de credito:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(387, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(21, 15);
+            label1.TabIndex = 11;
+            label1.Text = "ID:";
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Location = new Point(449, 27);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(0, 15);
+            lblId.TabIndex = 12;
+            // 
             // GestionClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(654, 450);
+            Controls.Add(lblId);
+            Controls.Add(label1);
             Controls.Add(txtTarjetaCredito);
             Controls.Add(lblTarjeta);
             Controls.Add(txtTelefono);
@@ -169,5 +190,7 @@
         private Label lblTelefono;
         private TextBox txtTarjetaCredito;
         private Label lblTarjeta;
+        private Label label1;
+        private Label lblId;
     }
 }

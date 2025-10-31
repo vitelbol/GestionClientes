@@ -27,14 +27,18 @@ namespace GestionClientes
             cliente.Telefono = txtTelefono.Text;
             cliente.TarjetaDeCredito = txtTarjetaCredito.Text;
 
-            listClientes.Items.Add(cliente);
+            ClienteDao baseDeDatos = new ClienteDao();
+            baseDeDatos.Guardar(cliente);
+            actualizarLista();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int indice = listClientes.SelectedIndex;
-            listClientes.Items.RemoveAt(indice);
-            MessageBox.Show("" + listClientes.SelectedIndex);
+            Cliente cliente = (Cliente) listClientes.SelectedItem;
+            ClienteDao baseDeDatos = new ClienteDao();
+
+            baseDeDatos.Eliminar(cliente);
+            actualizarLista();
         }
 
         private void GestionClientes_Load(object sender, EventArgs e)
