@@ -28,12 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            listClientes = new ListBox();
+            btnGuardar = new Button();
+            lblNombre = new Label();
+            txtNombre = new TextBox();
+            SuspendLayout();
+            // 
+            // listClientes
+            // 
+            listClientes.FormattingEnabled = true;
+            listClientes.Location = new Point(12, 30);
+            listClientes.Name = "listClientes";
+            listClientes.Size = new Size(297, 394);
+            listClientes.TabIndex = 0;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(557, 114);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 1;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(378, 58);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(54, 15);
+            lblNombre.TabIndex = 2;
+            lblNombre.Text = "Nombre:";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(449, 58);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(183, 23);
+            txtNombre.TabIndex = 3;
+            // 
+            // GestionClientes
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(654, 450);
+            Controls.Add(txtNombre);
+            Controls.Add(lblNombre);
+            Controls.Add(btnGuardar);
+            Controls.Add(listClientes);
+            Name = "GestionClientes";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ListBox listClientes;
+        private Button btnGuardar;
+        private Label lblNombre;
+        private TextBox txtNombre;
     }
 }

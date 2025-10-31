@@ -16,5 +16,11 @@ namespace GestionClientes
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+            listClientes.Items.Add(nombre);
+        }
     }
 }
