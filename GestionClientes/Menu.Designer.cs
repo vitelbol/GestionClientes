@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            btnGestionCLientes = new Button();
+            SuspendLayout();
+            // 
+            // btnGestionCLientes
+            // 
+            btnGestionCLientes.Location = new Point(125, 28);
+            btnGestionCLientes.Name = "btnGestionCLientes";
+            btnGestionCLientes.Size = new Size(75, 51);
+            btnGestionCLientes.TabIndex = 0;
+            btnGestionCLientes.Text = "Gestionar Clientes";
+            btnGestionCLientes.UseVisualStyleBackColor = true;
+            btnGestionCLientes.Click += btnGestionCLientes_Click;
+            // 
+            // Menu
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(232, 153);
+            Controls.Add(btnGestionCLientes);
+            Name = "Menu";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnGestionCLientes;
     }
 }

@@ -6,5 +6,11 @@ namespace GestionClientes
         {
             InitializeComponent();
         }
+
+        private void btnGestionCLientes_Click(object sender, EventArgs e)
+        {
+            GestionClientes ventanaGestionClientes = new GestionClientes();
+            ventanaGestionClientes.ShowDialog();
+        }
     }
 }
