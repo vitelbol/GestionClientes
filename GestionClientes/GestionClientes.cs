@@ -22,5 +22,12 @@ namespace GestionClientes
             string nombre = txtNombre.Text;
             listClientes.Items.Add(nombre);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int indice = listClientes.SelectedIndex;
+            listClientes.Items.RemoveAt(indice);
+            MessageBox.Show("" + listClientes.SelectedIndex);
+        }
     }
 }

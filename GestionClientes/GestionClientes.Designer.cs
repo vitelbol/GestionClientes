@@ -32,6 +32,7 @@
             btnGuardar = new Button();
             lblNombre = new Label();
             txtNombre = new TextBox();
+            btnEliminar = new Button();
             SuspendLayout();
             // 
             // listClientes
@@ -39,12 +40,12 @@
             listClientes.FormattingEnabled = true;
             listClientes.Location = new Point(12, 30);
             listClientes.Name = "listClientes";
-            listClientes.Size = new Size(297, 394);
+            listClientes.Size = new Size(297, 349);
             listClientes.TabIndex = 0;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(557, 114);
+            btnGuardar.Location = new Point(557, 87);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
             btnGuardar.TabIndex = 1;
@@ -68,11 +69,22 @@
             txtNombre.Size = new Size(183, 23);
             txtNombre.TabIndex = 3;
             // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(234, 385);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 4;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
             // GestionClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(654, 450);
+            Controls.Add(btnEliminar);
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
             Controls.Add(btnGuardar);
@@ -89,5 +101,6 @@
         private Button btnGuardar;
         private Label lblNombre;
         private TextBox txtNombre;
+        private Button btnEliminar;
     }
 }
