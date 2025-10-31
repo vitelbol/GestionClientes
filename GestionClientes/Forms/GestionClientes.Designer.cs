@@ -33,6 +33,12 @@
             lblNombre = new Label();
             txtNombre = new TextBox();
             btnEliminar = new Button();
+            txtApellido = new TextBox();
+            lblApellido = new Label();
+            txtTelefono = new TextBox();
+            lblTelefono = new Label();
+            txtTarjetaCredito = new TextBox();
+            lblTarjeta = new Label();
             SuspendLayout();
             // 
             // listClientes
@@ -45,7 +51,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(557, 87);
+            btnGuardar.Location = new Point(557, 215);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
             btnGuardar.TabIndex = 1;
@@ -79,11 +85,65 @@
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 
+            // txtApellido
+            // 
+            txtApellido.Location = new Point(449, 87);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(183, 23);
+            txtApellido.TabIndex = 6;
+            // 
+            // lblApellido
+            // 
+            lblApellido.AutoSize = true;
+            lblApellido.Location = new Point(378, 87);
+            lblApellido.Name = "lblApellido";
+            lblApellido.Size = new Size(54, 15);
+            lblApellido.TabIndex = 5;
+            lblApellido.Text = "Apellido:";
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Location = new Point(449, 116);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(183, 23);
+            txtTelefono.TabIndex = 8;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Location = new Point(378, 116);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(55, 15);
+            lblTelefono.TabIndex = 7;
+            lblTelefono.Text = "Telefono:";
+            // 
+            // txtTarjetaCredito
+            // 
+            txtTarjetaCredito.Location = new Point(378, 163);
+            txtTarjetaCredito.Name = "txtTarjetaCredito";
+            txtTarjetaCredito.Size = new Size(254, 23);
+            txtTarjetaCredito.TabIndex = 10;
+            // 
+            // lblTarjeta
+            // 
+            lblTarjeta.AutoSize = true;
+            lblTarjeta.Location = new Point(378, 145);
+            lblTarjeta.Name = "lblTarjeta";
+            lblTarjeta.Size = new Size(100, 15);
+            lblTarjeta.TabIndex = 9;
+            lblTarjeta.Text = "Tarjeta de credito:";
+            // 
             // GestionClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(654, 450);
+            Controls.Add(txtTarjetaCredito);
+            Controls.Add(lblTarjeta);
+            Controls.Add(txtTelefono);
+            Controls.Add(lblTelefono);
+            Controls.Add(txtApellido);
+            Controls.Add(lblApellido);
             Controls.Add(btnEliminar);
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
@@ -91,6 +151,7 @@
             Controls.Add(listClientes);
             Name = "GestionClientes";
             Text = "Form1";
+            Load += GestionClientes_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,5 +163,11 @@
         private Label lblNombre;
         private TextBox txtNombre;
         private Button btnEliminar;
+        private TextBox txtApellido;
+        private Label lblApellido;
+        private TextBox txtTelefono;
+        private Label lblTelefono;
+        private TextBox txtTarjetaCredito;
+        private Label lblTarjeta;
     }
 }
